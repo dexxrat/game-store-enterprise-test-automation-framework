@@ -8,15 +8,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Эта команда говорит Jenkins:
-                // "Возьми настройки Git из интерфейса проекта и скачай код"
+                // ОБЯЗАТЕЛЬНО: скачиваем файлы проекта из репозитория
                 checkout scm
             }
         }
 
         stage('Build & Test') {
             steps {
-                // Запускаем сборку
+                // Теперь, когда файлы скачаны, Maven найдет pom.xml
                 sh 'mvn clean test'
             }
         }
