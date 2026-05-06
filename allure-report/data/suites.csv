@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","7245","Успешная регистрация нового пользователя","Default Suite","2026-05-06","passed","2026-05-06","tests.AuthTests","CourseBackeEnd","tests.AuthTests","successfulRegistrationTest"
+"","365","successRegistrationTest","Default Suite","2026-05-06","passed","2026-05-06","tests.RegistrationTests","CourseBackeEnd","tests.RegistrationTests","successRegistrationTest"
+"Проверка доступности базы данных и отчетов Allure","72","testConnection","Default Suite","2026-05-06","passed","2026-05-06","com.example.gamestore.SmokeTest","CourseBackeEnd","com.example.gamestore.SmokeTest","testConnection"
+"","95","Техническая проверка работоспособности фреймворка","Default Suite","2026-05-06","passed","2026-05-06","tests.CheckTest","CourseBackeEnd","tests.CheckTest","technicalCheckTest"
