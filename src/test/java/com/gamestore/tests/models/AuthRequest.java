@@ -1,4 +1,4 @@
-package models;
+package com.gamestore.tests.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

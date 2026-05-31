@@ -31,7 +31,7 @@ public class CartServiceImpl implements CartService {
     private final GameRepository gameRepository;
 
     @Override
-    @Transactional(readOnly = true)
+    @Transactional
     public CartDTO getCartByUserId(Long userId) {
         try {
             log.info("Getting cart for user: {}", userId);
@@ -334,6 +334,7 @@ public class CartServiceImpl implements CartService {
         cart.setUpdatedAt(LocalDateTime.now());
     }
 
+    @Transactional
     private Cart createNewCart(Long userId) {
         try {
             User user = userRepository.findById(userId)
@@ -468,4 +469,5 @@ public class CartServiceImpl implements CartService {
             return List.of();
         }
     }
+
 }

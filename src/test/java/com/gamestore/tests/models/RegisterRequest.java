@@ -1,18 +1,16 @@
-package models;
+package com.gamestore.tests.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.List;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AuthResponse {
-    private String token;
-    private String type;
-    private Long id;
+public class RegisterRequest {
     private String username;
     private String email;
-    private List<String> roles;
+    private String password;
 }
