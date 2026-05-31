@@ -1,49 +1,49 @@
-# Game Store Backend
+# 🎮 Game Store — Enterprise Test Automation Framework
 
-**REST API for a video game e-commerce platform | BSUIR Course Project**
+[![Java](https://img.shields.io/badge/Java-21-blue.svg)](https://adoptium.net/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.4-brightgreen.svg)](https://spring.io/projects/spring-boot)
+[![JUnit 5](https://img.shields.io/badge/JUnit-5.11.4-green.svg)](https://junit.org/junit5/)
+[![REST Assured](https://img.shields.io/badge/REST%20Assured-5.5.0-brightgreen.svg)](https://rest-assured.io/)
+[![Docker](https://img.shields.io/badge/Docker-✔-blue.svg)](https://www.docker.com/)
 
-[![Java](https://img.shields.io/badge/Java-21-ED8B00?style=flat&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
-[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?style=flat&logo=spring-boot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat&logo=apache-maven&logoColor=white)](https://maven.apache.org/)
+## 📖 О проекте
 
----
+**Game Store** — это демонстрационный проект, созданный для демонстрации профессионального подхода к автоматизации тестирования микросервисной архитектуры.
 
-## About
+## 🛠 Технологический стек
 
-Server-side REST API for a multi-user video game store. Developed as a course project at BSUIR, Faculty of Computer Design, 2025.
+| Категория | Технологии |
+|-----------|------------|
+| **Backend** | Spring Boot 3.4.4, Spring Security, JWT, JPA |
+| **База данных** | PostgreSQL 17.9 |
+| **Тестовый фреймворк** | JUnit 5, REST Assured, AssertJ |
+| **Генерация данных** | Java Faker |
+| **Отчёты** | Allure Framework |
+| **Конфигурация** | Owner |
+| **Контейнеризация** | Docker, Docker Compose |
+| **CI/CD** | Jenkins |
 
-The system handles user authentication, product catalog management, shopping cart operations, and order processing with role-based access control.
+## ✅ Что тестируется
 
----
+- ✅ Регистрация и аутентификация (JWT)
+- ✅ Управление играми (CRUD)
+- ✅ Корзина покупок
+- ✅ Заказы
+- ✅ JSON Schema валидация
+- ✅ Performance assertions (response time)
 
-## Tech Stack
-
-- Java 21, Spring Boot 3.5
-- Spring Data JPA, Spring Security
-- PostgreSQL, Hibernate
-- Maven, Lombok
-- JWT authentication
-- REST API (JSON)
-
----
-
-## Features
-
-- User registration and login with data validation
-- Role-based access: user, admin
-- Game catalog browsing
-- Detailed product information
-- Shopping cart management
-- Order placement and tracking
-- Admin panel: add, edit, delete products and manage orders
-
----
-
-## Quick Start
+## 🚀 Быстрый старт
 
 ```bash
+# 1. Клонируй проект
+git clone https://github.com/dexxrat/game-store-backend.git
+cd game-store-backend
 
+# 2. Запусти Docker (PostgreSQL)
+docker-compose up -d
 
-# Run
-mvn spring-boot:run
+# 3. Запусти тесты
+mvn clean test
+
+# 4. Сгенерируй Allure отчёт
+mvn allure:serve
